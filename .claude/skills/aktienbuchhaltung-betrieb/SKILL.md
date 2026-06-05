@@ -6,6 +6,32 @@ user-invocable: true
 
 # Skill: Aktienbuchhaltung Betrieb
 
+## Implementierung
+
+Die Shell-Skripte liegen unter `scripts/`:
+
+| Skript | Zweck |
+|--------|-------|
+| `scripts/setup.sh` | Einmalige Einrichtung der Ablagestruktur |
+| `scripts/run_0945.sh` | Ausführung 09:45 (Update) |
+| `scripts/run_2230.sh` | Ausführung 22:30 (Tagesabschluss) |
+| `scripts/lib/common.sh` | Zeitstempel, Logging, Fehlerbehandlung |
+| `scripts/lib/backup.sh` | Backup-Erstellung |
+| `scripts/lib/checksums.sh` | SHA-256-Änderungserkennung |
+| `scripts/lib/plausibility.sh` | Plausibilitätsprüfung |
+| `scripts/lib/hugo_build.sh` | Hugo-Build mit Rollback |
+| `scripts/lib/git_ops.sh` | Git Commit + Push |
+| `scripts/lib/reports.sh` | Statusdatei + Tagesberichte |
+| `scripts/lib/publish.sh` | publish()-Prozedur |
+| `scripts/lib/finalize.sh` | finalize()-Prozedur |
+
+Konfiguration: `config/aktienbuchhaltung.conf`
+
+Beim Ausführen des Skills: Konfiguration laden, passendes Skript aufrufen
+(`run_0945.sh` oder `run_2230.sh` je nach Tageszeit), Ausgabe protokollieren.
+
+---
+
 ## Zweck
 
 Dieser Skill führt die periodische Aktualisierung der Aktienbuchhaltung, des
