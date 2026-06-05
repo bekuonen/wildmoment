@@ -1,3 +1,9 @@
+---
+description: Periodische Aktualisierung der Aktienbuchhaltung, des Vermögenscockpits und der Hugo-Webseite. Ausführung 09:45 (Update) und 22:30 (Tagesabschluss). Alle Schritte werden dokumentiert und in Obsidian abgelegt.
+name: Aktienbuchhaltung Betrieb
+user-invocable: true
+---
+
 # Skill: Aktienbuchhaltung Betrieb
 
 ## Zweck
