@@ -89,6 +89,18 @@ Fehlerjournal/Fehlerjournal.md
 
 Zeitkomponente im Dateinamen: `0945` oder `2230` — immer vierstellig, kein Trennzeichen.
 
+### Obsidian-Statusberichte
+
+Statusberichte für Obsidian gehören nach `05_System/_Statusberichte/` im Obsidian-Vault.
+
+Namenskonvention: `yyyy-mm-dd_Titel.md`
+
+Beispiele:
+```
+2026-06-19_Aktienbuchhaltung_V2_Status.md
+2026-06-19_Aktienbuchhaltung_V2_Analysebericht.md
+```
+
 ## Unveränderlichkeitsregeln
 
 Diese Regeln sind verbindliche Vorgaben, keine Empfehlungen:
