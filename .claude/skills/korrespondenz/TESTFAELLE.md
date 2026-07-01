@@ -185,6 +185,22 @@ bestätigen?"
 
 ---
 
+## T11 — Werbung
+
+**Eingabe:** „Nur diese Woche: 20 % auf das gesamte Sortiment. Jetzt zugreifen und
+sparen!"
+
+**Erwartet:**
+- Klassifikation: Werbung
+- Antwort nötig: Nein (unaufgeforderte kommerzielle Mail)
+- Priorität: Tief
+- Frist: Keine (künstlicher Zeitdruck, kein echter Termin)
+- Extraktion: keine (kein Absender mit Namen, keine Aufgabe)
+- Empfohlene Aktionen: Keine Aktion nötig
+- Antwortentwurf: Nein, mit Begründung
+
+---
+
 ## Querschnittsprüfungen (für alle Fälle)
 
 - Ausgabe folgt dem festen Ausgabeformat des Skills.

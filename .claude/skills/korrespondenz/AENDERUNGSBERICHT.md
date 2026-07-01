@@ -65,7 +65,32 @@ Punkt „Antwort senden" ist eine Vormerkung zur manuellen Freigabe.
 - **Spätere Automation** (Spark, Proton, Migadu, IMAP) ist bewusst noch nicht
   umgesetzt und für einen späteren Schritt vorgesehen.
 
-## 5. Ergebnis
+## 5. Finalisierung (2026-07-01)
 
-Nach Erweiterung, Konsistenzprüfung und Erstellung der Testfälle
-(`TESTFAELLE.md`) gilt der Skill als **Version 1.0**.
+Abschliessende Konsistenzprüfung vor Übergabe in den Dauerbetrieb:
+
+- **Testfall-Lücke geschlossen:** SKILL.md definiert acht Kategorien
+  (Privat, Geschäftlich, Newsletter, Werbung, Rechnung, Termin, Information,
+  Spamverdacht). T01–T10 deckten sieben davon ab, „Werbung" fehlte. Mit **T11**
+  sind nun alle acht Kategorien mit einem Referenzfall belegt.
+- Keine weiteren Doppelungen, veralteten Hinweise oder provisorischen
+  Formulierungen gefunden. Begriffe, Struktur und Reihenfolge zwischen
+  SKILL.md, TESTFAELLE.md und diesem Bericht stimmen überein.
+- Gemäss Pareto-Prinzip wurde keine funktionierende Regel weiter optimiert und
+  keine neue Funktion ergänzt.
+
+**Offener Punkt (bewusst nicht in dieser Finalisierung gelöst):** Der Skill
+liegt aktuell im Repository `wildmoment` (Branch
+`claude/korrespondenz-skill-optimize-0af1rz`) und noch nicht an einem der
+beiden gemäss Governance-Regel G7 zulässigen Skill-Heimatorte
+(`~/.claude/skills/` oder iCloud-Workspace `.claude/skills/`). Umzug an den
+Heimatort sowie die davon abhängige Registrierung im Skill-Handbuch (G7)
+erfolgen auf ausdrücklichen Nutzerentscheid separat und sind nicht Teil dieser
+Finalisierung.
+
+## 6. Ergebnis
+
+Nach Erweiterung, Konsistenzprüfung, Erstellung der Testfälle
+(`TESTFAELLE.md`) und abschliessender Finalisierung gilt der Skill als
+**Version 1.0 — produktionsbereit** (fachlich abgeschlossen; Heimatort-Umzug
+gemäss Abschnitt 5 separat zu entscheiden).
