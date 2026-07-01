@@ -90,6 +90,21 @@ die zweite in der Begründung erwähnen.
 
 ---
 
+## Extraktion
+
+Wichtige Informationen aus der Mail strukturiert erfassen. Nur nennen, was
+tatsächlich vorkommt; leere Felder mit „keine" kennzeichnen. Nichts erfinden.
+
+- **Personen** — genannte Namen und Rollen
+- **Organisationen** — Firmen, Behörden, Institutionen
+- **Termine** — Datum und Uhrzeit von Terminen
+- **Fristen** — Fälligkeiten und Stichtage
+- **Aufgaben** — konkrete To-dos oder Zusagen
+- **Anhänge** — erwähnte oder beigefügte Dateien
+- **Links** — enthaltene URLs (bei Spamverdacht nicht öffnen, nur nennen)
+
+---
+
 ## Handlungsbedarf
 
 Bestimmen, ob eine Antwort nötig ist:
@@ -115,21 +130,6 @@ Bei **Nein** wird immer kurz begründet, warum keine Antwort nötig ist.
 - **Keine** — kein Termin erkennbar.
 - **Datum** — konkretes Datum oder Zeitfenster nennen.
 - **Unklar** — Frist angedeutet, aber nicht eindeutig; als offen kennzeichnen.
-
----
-
-## Extraktion
-
-Wichtige Informationen aus der Mail strukturiert erfassen. Nur nennen, was
-tatsächlich vorkommt; leere Felder mit „keine" kennzeichnen. Nichts erfinden.
-
-- **Personen** — genannte Namen und Rollen
-- **Organisationen** — Firmen, Behörden, Institutionen
-- **Termine** — Datum und Uhrzeit von Terminen
-- **Fristen** — Fälligkeiten und Stichtage
-- **Aufgaben** — konkrete To-dos oder Zusagen
-- **Anhänge** — erwähnte oder beigefügte Dateien
-- **Links** — enthaltene URLs (bei Spamverdacht nicht öffnen, nur nennen)
 
 ---
 
@@ -292,9 +292,10 @@ Dieser Skill ist bewusst ohne technische Anbindung gehalten. Er stellt keine
 Verbindung zu Spark, Proton, Migadu, IMAP oder einem anderen Mailsystem her und
 versendet nichts.
 
-Die strukturierte Ausgabe (Klassifikation, Handlungsbedarf, Priorität, Frist)
-ist so gehalten, dass sie später von einem manuellen oder halbautomatischen
-Prozess weiterverwendet werden kann. Eine spätere Automatisierung baut auf
+Die strukturierte Ausgabe (Klassifikation, Extraktion, Handlungsbedarf,
+Priorität, Frist, Konfidenz, empfohlene Aktionen) ist so gehalten, dass sie
+später von einem manuellen oder halbautomatischen Prozess weiterverwendet werden
+kann. Eine spätere Automatisierung baut auf
 diesem Format auf, ersetzt aber nie die manuelle Freigabe vor dem Versand.
 
 ---
@@ -306,3 +307,12 @@ Analyse vor Antwort.
 Klarheit vor Höflichkeitsfloskeln.
 
 Freigabe vor Versand.
+
+---
+
+## Version
+
+**1.0** — Erste geprüfte Fassung. Enthält Analyse, Klassifikation,
+Handlungsbedarf, Priorität, Frist, Extraktion, Konfidenz, empfohlene Aktionen und
+optionalen Antwortentwurf. Konsistenz und Testfälle siehe
+`AENDERUNGSBERICHT.md` und `TESTFAELLE.md` im selben Verzeichnis.
