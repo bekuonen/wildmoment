@@ -2,6 +2,13 @@
 
 Stand: 2026-07-01
 
+**Projektstatus: Korrespondenz-Skill V1.0 abgeschlossen.** Fachlich abgeschlossen
+und produktionsbereit; keine weiteren Änderungen an diesem Bericht vorgesehen.
+Einziger offener Punkt (Heimatort-Umzug gemäss G7, siehe Abschnitt 5) ist als
+Infrastrukturthema im Governance-/Infrastruktur-Statusbericht
+(`05_System/Status.md` im Vault) nachgeführt und wird dort weiterverfolgt —
+nicht in diesem Dokument.
+
 ## 1. Vorgenommene Erweiterungen
 
 Ausgehend von der ersten Skill-Fassung (Analyse, Klassifikation,
