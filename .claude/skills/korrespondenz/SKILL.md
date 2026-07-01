@@ -43,12 +43,14 @@ Fehlt der Mailtext, wird er angefragt. Es werden keine Inhalte erfunden.
 Für jede Mail werden diese Schritte durchlaufen:
 
 1. **Mail lesen** — vollständigen Text und, falls vorhanden, den Verlauf erfassen.
-2. **Inhalt verstehen** — Kernaussage, Absicht und offene Punkte bestimmen.
+2. **Inhalt verstehen** — Kernaussage, Absicht und offene Punkte bestimmen sowie
+   wichtige Informationen extrahieren (siehe Extraktion).
 3. **Klassifizieren** — Kategorie zuordnen (siehe Klassifikation).
 4. **Handlungsbedarf bestimmen** — ist eine Antwort erforderlich?
 5. **Priorität und Frist erkennen** — Dringlichkeit und allfällige Termine.
 6. **Antwortentwurf erstellen** — nur, wenn eine Antwort sinnvoll oder nötig ist.
-7. **Ergebnis strukturiert ausgeben** — im festen Ausgabeformat.
+7. **Ergebnis strukturiert ausgeben** — im festen Ausgabeformat, inklusive
+   Konfidenzbewertung und empfohlener Aktionen.
 
 ---
 
@@ -116,6 +118,54 @@ Bei **Nein** wird immer kurz begründet, warum keine Antwort nötig ist.
 
 ---
 
+## Extraktion
+
+Wichtige Informationen aus der Mail strukturiert erfassen. Nur nennen, was
+tatsächlich vorkommt; leere Felder mit „keine" kennzeichnen. Nichts erfinden.
+
+- **Personen** — genannte Namen und Rollen
+- **Organisationen** — Firmen, Behörden, Institutionen
+- **Termine** — Datum und Uhrzeit von Terminen
+- **Fristen** — Fälligkeiten und Stichtage
+- **Aufgaben** — konkrete To-dos oder Zusagen
+- **Anhänge** — erwähnte oder beigefügte Dateien
+- **Links** — enthaltene URLs (bei Spamverdacht nicht öffnen, nur nennen)
+
+---
+
+## Konfidenz
+
+Einschätzung, wie sicher die Analyse ist, als Wert von 0–100 % mit kurzer
+Begründung. Tiefe Werte entstehen bei unklarem Inhalt, fehlendem Verlauf oder
+mehrdeutiger Absicht.
+
+- **80–100 %** — Inhalt und Absicht eindeutig
+- **50–79 %** — teils unklar, Annahmen nötig
+- **0–49 %** — unklar oder mehrdeutig; Rückfrage empfohlen
+
+---
+
+## Empfohlene Aktionen
+
+Checkliste möglicher Folgeprozesse zur Freigabe. Nur zutreffende Punkte
+aufführen. Es wird nichts davon selbst ausgeführt — die Liste dient der
+manuellen oder späteren halbautomatischen Weiterverarbeitung.
+
+Mögliche Punkte (Auswahl je nach Mail):
+
+- [ ] Antwort senden (Entwurf liegt vor)
+- [ ] Termin in Kalender eintragen
+- [ ] Frist notieren oder Erinnerung setzen
+- [ ] Aufgabe in Aufgabenliste übernehmen
+- [ ] Rechnung zur Zahlung weiterleiten
+- [ ] Anhang prüfen oder ablegen
+- [ ] Rückfrage stellen (offener Punkt)
+- [ ] An zuständige Person weiterleiten
+- [ ] Als Spam markieren oder ignorieren
+- [ ] Keine Aktion nötig
+
+---
+
 ## Ausgabeformat
 
 Standardmässig immer dieses Format verwenden:
@@ -128,6 +178,16 @@ Klassifikation
 Kurzinhalt
 ----------
 <2–3 Sätze>
+
+Extraktion
+----------
+Personen: <... / keine>
+Organisationen: <... / keine>
+Termine: <... / keine>
+Fristen: <... / keine>
+Aufgaben: <... / keine>
+Anhänge: <... / keine>
+Links: <... / keine>
 
 Handlungsbedarf
 ---------------
@@ -142,9 +202,17 @@ Frist
 -----
 <Keine / Datum / unklar>
 
+Konfidenz
+---------
+<0–100 %> — <kurze Begründung>
+
 Empfehlung
 ----------
 <konkreter nächster Schritt>
+
+Empfohlene Aktionen
+-------------------
+- [ ] <nur zutreffende Punkte, siehe Abschnitt Empfohlene Aktionen>
 
 Antwortentwurf
 --------------
